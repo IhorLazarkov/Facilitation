@@ -1,0 +1,4 @@
+info/facilitator/page/UbsItAnywherePage.java
+ info.facilitator.page.UbsItAnywherePage
+info/facilitator/page/UbsItAnywhereWelcomePage.java
+ info.facilitator.page.UbsItAnywhereWelcomePage
