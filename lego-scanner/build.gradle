@@ -5,17 +5,15 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-
 repositories {
     mavenCentral()
 }
-
 
 dependencies {
     implementation('org.seleniumhq.selenium:selenium-java:3.141.59')
     implementation('io.github.bonigarcia:webdrivermanager:3.4.0')
     implementation('org.hibernate:hibernate-core:5.5.0.Final')
-    implementation('org.apache.derby:derby-project:10.15.2.0')
+    implementation 'org.apache.derby:derby:10.14.2.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
