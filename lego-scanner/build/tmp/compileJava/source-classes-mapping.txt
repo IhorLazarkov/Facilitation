@@ -10,3 +10,8 @@ info/facilitator/page/AcceptCookiePage.java
  info.facilitator.page.AcceptCookiePage
 info/facilitator/bean/LegoBeanBuilder.java
  info.facilitator.bean.LegoBeanBuilder
+info/facilitator/bean/dao/LegoDAO.java
+ info.facilitator.bean.dao.LegoDAO
+info/facilitator/persister/SessionProvider.java
+ info.facilitator.persister.SessionProvider
+ info.facilitator.persister.SessionProvider$DatabaseFunctional

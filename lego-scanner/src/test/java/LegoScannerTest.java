@@ -1,3 +1,5 @@
+import info.facilitator.bean.dao.LegoDAO;
+import info.facilitator.persister.SessionProvider;
 import info.facilitator.page.LegoSalesPage;
 import info.facilitator.page.LegoWelcomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -32,7 +34,9 @@ public class LegoScannerTest {
 
         LegoSalesPage legoSalesPage = PageFactory.initElements(driver, LegoSalesPage.class);
         legoSalesPage.openSalesPage();
-        legoSalesPage.getLegos().forEach(System.out::println);
+        SessionProvider.withSession(session -> {
+            legoSalesPage.getLegos().forEach(item -> LegoDAO.persist(session, item));
+        });
 
         Thread.sleep(2000);
     }
