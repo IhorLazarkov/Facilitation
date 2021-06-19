@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class AcceptCookiePage {
 
     private final WebDriverWait wait;
@@ -22,7 +24,10 @@ public class AcceptCookiePage {
     }
 
     public boolean isCookieModalAppear() {
-        return wait.until(ExpectedConditions.visibilityOf(modal)) != null;
+        return wait
+                .withTimeout(Duration.ofSeconds(3))
+                .pollingEvery(Duration.ofMillis(10))
+                .until(ExpectedConditions.visibilityOf(modal)) != null;
     }
 
     public void closeModal() {

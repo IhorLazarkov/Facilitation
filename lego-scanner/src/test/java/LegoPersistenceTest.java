@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class LegoPersistence {
+public class LegoPersistenceTest {
 
     private LegoBean bean;
 
@@ -28,9 +28,9 @@ public class LegoPersistence {
         configuration.configure();
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.save(bean);
-        session.getTransaction().commit();
+//        session.beginTransaction();
+//        session.save(bean);
+//        session.getTransaction().commit();
 
         Query<LegoBean> query = session.createQuery("From LegoBean", LegoBean.class);
         List<LegoBean> resultList = query.getResultList();

@@ -23,29 +23,14 @@ public class LegoWelcomePage {
     }
 
     public void checkSales() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(btnSales));
-            btnSales.click();
-
-            //In case banner appears
-        } catch (Exception e) {
-            e.printStackTrace();
-            LegoWelcomePageBanner pageBanner = PageFactory.initElements(driver, LegoWelcomePageBanner.class);
-            if (pageBanner.isBannerAppeared())
-                pageBanner.closeTheBanner();
-
-            //In case accept cookie appears
-            try {
-                btnSales.click();
-            } catch (Exception ee) {
-
-                ee.printStackTrace();
-                AcceptCookiePage acceptCookiePage = PageFactory.initElements(this.driver, AcceptCookiePage.class);
-                if (acceptCookiePage.isCookieModalAppear())
-                    acceptCookiePage.closeModal();
-                btnSales.click();
-            }
-        }
+        LegoWelcomePageBanner pageBanner = PageFactory.initElements(driver, LegoWelcomePageBanner.class);
+        if (pageBanner.isBannerAppeared())
+            pageBanner.closeTheBanner();
+        AcceptCookiePage acceptCookiePage = PageFactory.initElements(this.driver, AcceptCookiePage.class);
+        if (acceptCookiePage.isCookieModalAppear())
+            acceptCookiePage.closeModal();
+        wait.until(ExpectedConditions.visibilityOf(btnSales));
+        btnSales.click();
     }
 
 }

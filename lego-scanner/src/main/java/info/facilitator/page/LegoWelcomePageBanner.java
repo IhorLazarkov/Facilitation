@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class LegoWelcomePageBanner {
 
     private final WebDriverWait wait;
@@ -23,7 +25,9 @@ public class LegoWelcomePageBanner {
     }
 
     public boolean isBannerAppeared() {
-        return wait.until(ExpectedConditions.visibilityOf(bannerMain)) != null;
+        return wait.withTimeout(Duration.ofSeconds(3))
+                .pollingEvery(Duration.ofMillis(10))
+                .until(ExpectedConditions.visibilityOf(bannerMain)) != null;
     }
 
     public void closeTheBanner() {

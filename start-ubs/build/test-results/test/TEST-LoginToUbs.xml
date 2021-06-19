@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LoginToUbs" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-15T19:51:37" hostname="LAPTOP-5G37HQ6A" time="13.261">
+<testsuite name="LoginToUbs" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-18T18:06:11" hostname="EPUSPRIW02BF" time="12.864">
   <properties/>
-  <testcase name="test()" classname="LoginToUbs" time="13.261"/>
+  <testcase name="test()" classname="LoginToUbs" time="12.864"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 45068
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 41100
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun 15, 2021 2:51:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 18, 2021 1:06:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

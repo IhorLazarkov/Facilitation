@@ -26,7 +26,7 @@ public class LegoScannerTest {
     }
 
     @Test
-    public void test1() throws InterruptedException {
+    public void test1() {
         driver.get("https://www.lego.com/en-us");
 
         LegoWelcomePage page = PageFactory.initElements(driver, LegoWelcomePage.class);
@@ -37,7 +37,5 @@ public class LegoScannerTest {
         SessionProvider.withSession(session -> {
             legoSalesPage.getLegos().forEach(item -> LegoDAO.persist(session, item));
         });
-
-        Thread.sleep(2000);
     }
 }
