@@ -1,7 +1,7 @@
-info/facilitator/bean/LegoBeanBuilder.java
- info.facilitator.bean.LegoBeanBuilder
-info/facilitator/bean/LegoBean.java
- info.facilitator.bean.LegoBean
+info/facilitator/page/LegoSalesPage.java
+ info.facilitator.page.LegoSalesPage
+info/facilitator/page/AcceptCookiePage.java
+ info.facilitator.page.AcceptCookiePage
 info/facilitator/bean/dao/LegoDAO.java
  info.facilitator.bean.dao.LegoDAO
 info/facilitator/page/LegoWelcomePageBanner.java
@@ -9,9 +9,9 @@ info/facilitator/page/LegoWelcomePageBanner.java
 info/facilitator/persister/SessionProvider.java
  info.facilitator.persister.SessionProvider
  info.facilitator.persister.SessionProvider$DatabaseFunctional
-info/facilitator/page/LegoSalesPage.java
- info.facilitator.page.LegoSalesPage
-info/facilitator/page/AcceptCookiePage.java
- info.facilitator.page.AcceptCookiePage
+info/facilitator/bean/LegoBean.java
+ info.facilitator.bean.LegoBean
+info/facilitator/bean/LegoBeanBuilder.java
+ info.facilitator.bean.LegoBeanBuilder
 info/facilitator/page/LegoWelcomePage.java
  info.facilitator.page.LegoWelcomePage

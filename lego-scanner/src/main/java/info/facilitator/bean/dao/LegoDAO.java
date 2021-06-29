@@ -4,6 +4,11 @@ import info.facilitator.bean.LegoBean;
 import org.hibernate.Session;
 
 import javax.persistence.criteria.CriteriaUpdate;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.function.Predicate;
 
 public class LegoDAO {
 
@@ -15,8 +20,19 @@ public class LegoDAO {
         session.update(bean);
     }
 
-    public static void isAvailableToday(Session session, LegoBean bean){
-        //TODO
-//        session.createQuery("From Book where ")
+    public static Predicate<LegoBean> isToday(){
+        return bean -> {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                Date currentDate = simpleDateFormat.parse(LocalDateTime.now().toString());
+                Date date = simpleDateFormat.parse(bean.getDate());
+                int result = date.compareTo(currentDate);
+                return result == 0 ;
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            return false;
+        };
     }
 }
