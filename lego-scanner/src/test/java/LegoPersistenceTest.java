@@ -40,7 +40,7 @@ public class LegoPersistenceTest {
 
         Query<LegoBean> query = session.createQuery("From LegoBean Order By id desc", LegoBean.class);
         List<LegoBean> resultList = query.getResultList();
-        resultList.stream().filter(isToday()).collect(Collectors.toList()).forEach(System.out::println);
+        resultList.forEach(System.out::println);
         session.close();
         sessionFactory.close();
 
