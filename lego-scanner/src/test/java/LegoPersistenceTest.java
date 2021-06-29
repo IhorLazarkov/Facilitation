@@ -45,20 +45,4 @@ public class LegoPersistenceTest {
         sessionFactory.close();
 
     }
-
-    private Predicate<LegoBean> isToday(){
-        return bean -> {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            try {
-                Date currentDate = simpleDateFormat.parse(LocalDateTime.now().toString());
-                Date date = simpleDateFormat.parse(bean.getDate());
-                int result = date.compareTo(currentDate);
-                return result == 0 ;
-
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-            return false;
-        };
-    }
 }
