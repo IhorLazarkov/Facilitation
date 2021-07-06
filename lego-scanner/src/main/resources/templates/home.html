@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lego Scanner</title>
+</head>
+<body>
+<p>Index page</p>
+<#if items?has_content>
+
+<#list items as item>
+    ${item}<br>
+</#list>
+
+<#else>
+<p>No data available</p>
+</#if>
+</body>
+</html>
