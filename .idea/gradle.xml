@@ -10,7 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/lego-scanner" />
-            <option value="$PROJECT_DIR$/start-ubs" />
           </set>
         </option>
       </GradleProjectSettings>
