@@ -21,3 +21,5 @@ org/legoscanner/web/components/ViewResolverComponent.java
  org.legoscanner.web.components.ViewResolverComponent
 org/legoscanner/web/controllers/GenericController.java
  org.legoscanner.web.controllers.GenericController
+info/facilitator/app/LegoScannerApp.java
+ info.facilitator.app.LegoScannerApp

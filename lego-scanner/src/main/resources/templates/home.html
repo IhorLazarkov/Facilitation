@@ -5,12 +5,29 @@
     <title>Lego Scanner</title>
 </head>
 <body>
-<p>Index page</p>
-<#if items?has_content>
+<p>Lego's sales for period</p>
+<#if legos?has_content>
 
-<#list items as item>
-    ${item}<br>
-</#list>
+<table>
+    <thead>
+        <tr>
+            <td>Date</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Sale Price</td>
+        </tr>
+    </thead>
+    <tbody>
+    <#list legos as lego>
+        <tr>
+            <td>${lego.date}</td>
+            <td>${lego.legoName}</td>
+            <td>${lego.price}</td>
+            <td>${lego.priceForSale}</td>
+        </tr>
+    </#list>
+    </tbody>
+</table>
 
 <#else>
 <p>No data available</p>
