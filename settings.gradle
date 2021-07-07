@@ -1,5 +1,4 @@
 rootProject.name = 'facilitation'
 
-include 'start-ubs'
 include 'lego-scanner'
 
