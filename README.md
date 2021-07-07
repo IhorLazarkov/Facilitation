@@ -14,3 +14,11 @@ The scanning part done via Selenium and Web App is done via Spring-Boot-Web
 # How to build
 
 > gradlew :lego-scanner:build
+
+# How to launch the scanner
+
+Navigate Run > Edit Configuration and select 'LegoScannerApp' configuration. 
+
+# How to launch the Web App
+
+Navigate Run > Edit Configuration and select 'LegoScannerWebApp' configuration. 
