@@ -1,4 +1,2 @@
-LegoScannerTest.java
- LegoScannerTest
 LegoPersistenceTest.java
  LegoPersistenceTest
