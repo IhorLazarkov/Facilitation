@@ -1,6 +1,7 @@
 package info.facilitator.bean;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "Lego")
@@ -46,6 +47,19 @@ public class LegoBean {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LegoBean legoBean = (LegoBean) o;
+        return Objects.equals(id, legoBean.id) && Objects.equals(legoName, legoBean.legoName) && Objects.equals(price, legoBean.price) && Objects.equals(priceForSale, legoBean.priceForSale) && Objects.equals(date, legoBean.date);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(legoName, price, priceForSale, date);
     }
 
     @Override
