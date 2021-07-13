@@ -31,6 +31,8 @@ test {
 
 task runScanner(type: JavaExec){
 
+    dependsOn 'build'
+
     classpath = sourceSets.main.runtimeClasspath
 
     mainClass = "info.facilitator.app.LegoScannerApp"
