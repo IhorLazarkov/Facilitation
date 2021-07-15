@@ -1,18 +1,20 @@
+org/legoscanner/web/components/ViewResolverComponent.java
+ org.legoscanner.web.components.ViewResolverComponent
 org/legoscanner/web/app/Application.java
  org.legoscanner.web.app.Application
 info/facilitator/page/LegoWelcomePage.java
  info.facilitator.page.LegoWelcomePage
-info/facilitator/page/LegoSalesPage.java
- info.facilitator.page.LegoSalesPage
-org/legoscanner/web/components/ViewResolverComponent.java
- org.legoscanner.web.components.ViewResolverComponent
-info/facilitator/page/LegoWelcomePageBanner.java
- info.facilitator.page.LegoWelcomePageBanner
 info/facilitator/page/AcceptCookiePage.java
  info.facilitator.page.AcceptCookiePage
+org/legoscanner/web/config/SwaggerConfig.java
+ org.legoscanner.web.config.SwaggerConfig
 info/facilitator/persister/SessionProvider.java
  info.facilitator.persister.SessionProvider
  info.facilitator.persister.SessionProvider$DatabaseFunctional
+info/facilitator/page/LegoWelcomePageBanner.java
+ info.facilitator.page.LegoWelcomePageBanner
+info/facilitator/page/LegoSalesPage.java
+ info.facilitator.page.LegoSalesPage
 info/facilitator/bean/LegoBean.java
  info.facilitator.bean.LegoBean
 info/facilitator/bean/dao/LegoDAO.java

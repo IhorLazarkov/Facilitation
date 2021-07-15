@@ -2,18 +2,19 @@ package org.legoscanner.web.controllers;
 
 import info.facilitator.bean.LegoBean;
 import info.facilitator.persister.SessionProvider;
+import io.swagger.annotations.ApiOperation;
 import org.hibernate.query.Query;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-@Controller
+@RestController
 public class GenericController {
 
+    @ApiOperation(value = "Get all data", response = ModelAndView.class)
     @GetMapping("/")
     public ModelAndView index() {
         final List<LegoBean> legos = new LinkedList<>();
@@ -25,7 +26,7 @@ public class GenericController {
         });
         ModelAndView mv = new ModelAndView("home");
         mv.addObject("legos", legos);
-        System.out.println(legos);
+        legos.forEach(System.out::println);
         return mv;
     }
 }
