@@ -21,4 +21,8 @@ Navigate Run > Edit Configuration and select 'LegoScannerApp' configuration.
 
 # How to launch the Web App
 
-Navigate Run > Edit Configuration and select 'LegoScannerWebApp' configuration. 
+Navigate Run > Edit Configuration and select 'LegoScannerWebApp' configuration.
+
+# API documentation
+
+This project has Swagger 2. Navigate to http://localhost:8081/swagger-ui.html to see API's documentation.
