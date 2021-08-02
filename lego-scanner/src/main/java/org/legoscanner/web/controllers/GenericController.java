@@ -4,8 +4,6 @@ import info.facilitator.bean.LegoBean;
 import info.facilitator.persister.SessionProvider;
 import io.swagger.annotations.ApiOperation;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
-import org.legoscanner.web.serviceimplementation.DefaultFetcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
