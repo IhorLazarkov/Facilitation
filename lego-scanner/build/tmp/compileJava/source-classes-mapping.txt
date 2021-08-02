@@ -19,9 +19,11 @@ info/facilitator/bean/LegoBean.java
  info.facilitator.bean.LegoBean
 info/facilitator/bean/dao/LegoDAO.java
  info.facilitator.bean.dao.LegoDAO
-org/legoscanner/web/controllers/GenericController.java
- org.legoscanner.web.controllers.GenericController
-info/facilitator/app/LegoScannerApp.java
- info.facilitator.app.LegoScannerApp
 info/facilitator/bean/LegoBeanBuilder.java
  info.facilitator.bean.LegoBeanBuilder
+info/facilitator/app/LegoScannerApp.java
+ info.facilitator.app.LegoScannerApp
+org/legoscanner/web/serviceimplementation/DefaultFetcher.java
+ org.legoscanner.web.serviceimplementation.DefaultFetcher
+org/legoscanner/web/controllers/GenericController.java
+ org.legoscanner.web.controllers.GenericController
