@@ -1,495 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LegoPersistenceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-12T23:58:21" hostname="EPUSPRIW02BF" time="0.3">
+<testsuite name="LegoPersistenceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-03T02:05:36" hostname="EPUSPRIW02BF" time="2.269">
   <properties/>
-  <testcase name="testPersistence()" classname="LegoPersistenceTest" time="0.256"/>
-  <testcase name="testUpdate()" classname="LegoPersistenceTest" time="0.044"/>
-  <system-out><![CDATA[18:58:19.663 [Test worker] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-18:58:19.677 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
-18:58:19.679 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
-18:58:19.683 [Test worker] DEBUG org.hibernate.integrator.internal.IntegratorServiceImpl - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
-18:58:19.719 [Test worker] INFO org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.0.Final
-18:58:19.721 [Test worker] DEBUG org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-18:58:19.916 [Test worker] DEBUG org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver - Interpreting public/system identifier : [-//Hibernate/Hibernate Configuration DTD 3.0//EN] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
-18:58:19.917 [Test worker] DEBUG org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
-18:58:19.921 [Test worker] DEBUG org.hibernate.boot.cfgxml.internal.JaxbCfgProcessor - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
-18:58:20.140 [Test worker] DEBUG org.hibernate.cfg.Configuration - Building session factory using internal StandardServiceRegistryBuilder
-18:58:20.146 [Test worker] DEBUG org.hibernate.service.spi.ServiceBinding - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
-18:58:20.146 [Test worker] DEBUG org.hibernate.cfg.Configuration - Building session factory using provided StandardServiceRegistry
-18:58:20.161 [Test worker] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
-18:58:20.162 [Test worker] DEBUG org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
-18:58:20.185 [Test worker] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18:58:20.226 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@e056d11
-18:58:20.226 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@e056d11
-18:58:20.227 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@e056d11
-18:58:20.228 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@38537045
-18:58:20.229 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@32356ad5
-18:58:20.230 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@7cf111fe
-18:58:20.231 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@4bb49faa
-18:58:20.232 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@4bb49faa
-18:58:20.232 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4bb49faa
-18:58:20.234 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@18b8eaf3
-18:58:20.234 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@18b8eaf3
-18:58:20.234 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@18b8eaf3
-18:58:20.236 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@24c798cb
-18:58:20.236 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@24c798cb
-18:58:20.236 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@24c798cb
-18:58:20.238 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@5acf5870
-18:58:20.238 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@5acf5870
-18:58:20.238 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5acf5870
-18:58:20.240 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@a86b8c2
-18:58:20.240 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@a86b8c2
-18:58:20.240 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@a86b8c2
-18:58:20.241 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2e3a835
-18:58:20.242 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@2e3a835
-18:58:20.242 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@2e3a835
-18:58:20.243 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4794cc6e
-18:58:20.243 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4794cc6e
-18:58:20.244 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4794cc6e
-18:58:20.245 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@35c292e7
-18:58:20.245 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@35c292e7
-18:58:20.247 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@1c6f8007
-18:58:20.247 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@1c6f8007
-18:58:20.249 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@4277df6e
-18:58:20.249 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@4277df6e
-18:58:20.250 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@19f90ba2
-18:58:20.251 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@66e0b6cf
-18:58:20.252 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@1b61868f
-18:58:20.252 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@1b61868f
-18:58:20.253 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@1edf4068
-18:58:20.253 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@1edf4068
-18:58:20.257 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@4a64d9ed
-18:58:20.257 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@4a64d9ed
-18:58:20.258 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@77b8777a
-18:58:20.258 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@77b8777a
-18:58:20.259 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@4f968dff
-18:58:20.259 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@4f968dff
-18:58:20.260 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@59f7d418
-18:58:20.260 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@59f7d418
-18:58:20.262 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@10380868
-18:58:20.262 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@10380868
-18:58:20.263 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@2f4f5300
-18:58:20.263 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@2f4f5300
-18:58:20.264 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4b529258
-18:58:20.264 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@4b529258
-18:58:20.266 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@66409a5e
-18:58:20.266 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@66409a5e
-18:58:20.267 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@64f7d949
-18:58:20.268 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@64f7d949
-18:58:20.269 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@71ed572c
-18:58:20.269 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@71ed572c
-18:58:20.269 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@71ed572c
-18:58:20.271 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@18b4ea52
-18:58:20.271 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@7161ec32
-18:58:20.271 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7161ec32
-18:58:20.272 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7161ec32
-18:58:20.272 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6e2bedcd
-18:58:20.273 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@1ec1afb7
-18:58:20.274 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@377d52bc
-18:58:20.274 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@377d52bc
-18:58:20.275 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@62b47bea
-18:58:20.275 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@62b47bea
-18:58:20.276 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@1b5839c2
-18:58:20.276 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@1b5839c2
-18:58:20.277 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@56426884
-18:58:20.277 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@56426884
-18:58:20.278 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@5934da5d
-18:58:20.278 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@5934da5d
-18:58:20.279 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@658e08e8
-18:58:20.279 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@6a37ab4b
-18:58:20.280 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@6a37ab4b
-18:58:20.280 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@6a37ab4b
-18:58:20.281 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@7b6ca52
-18:58:20.281 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@7b6ca52
-18:58:20.281 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@7b6ca52
-18:58:20.282 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@2433d21c
-18:58:20.282 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@7728c3db
-18:58:20.283 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@e83a768
-18:58:20.284 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@e83a768
-18:58:20.284 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@e83a768
-18:58:20.285 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@320223d7
-18:58:20.285 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@320223d7
-18:58:20.285 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@320223d7
-18:58:20.285 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@438c6707
-18:58:20.286 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@21efa22e
-18:58:20.287 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@49c39f1d
-18:58:20.287 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@49c39f1d
-18:58:20.288 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@f38857
-18:58:20.289 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@168cdaa3
-18:58:20.289 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@168cdaa3
-18:58:20.291 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@66415774
-18:58:20.291 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@66415774
-18:58:20.291 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2470f445
-18:58:20.292 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@52ccfec3
-18:58:20.293 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@70b4c7c
-18:58:20.296 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@40b26b99
-18:58:20.296 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@40b26b99
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6fce96a2
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@7b633006
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1ed35a65
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@3c62a655
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@27824cfd
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4583ab0b
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@4107c1ac
-18:58:20.297 [Test worker] DEBUG org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@68fe97d7
-18:58:20.326 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
-18:58:20.327 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
-18:58:20.327 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
-18:58:20.327 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
-18:58:20.328 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
-18:58:20.329 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
-18:58:20.330 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
-18:58:20.331 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-18:58:20.332 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
-18:58:20.333 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
-18:58:20.333 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
-18:58:20.334 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
-18:58:20.334 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
-18:58:20.335 [Test worker] DEBUG org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
-18:58:20.340 [Test worker] WARN org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-18:58:20.531 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:data;create=true]
-18:58:20.531 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=application}
-18:58:20.531 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-18:58:20.534 [Test worker] DEBUG org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Initializing Connection pool with 1 Connections
-18:58:20.534 [Test worker] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
-18:58:20.738 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Database ->
-       name : Apache Derby
-    version : 10.14.2.0 - (1828579)
-      major : 10
-      minor : 14
-18:58:20.738 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - Driver ->
-       name : Apache Derby Embedded JDBC Driver
-    version : 10.14.2.0 - (1828579)
-      major : 10
-      minor : 14
-18:58:20.738 [Test worker] DEBUG org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - JDBC version : 4.2
-18:58:20.751 [Test worker] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
-18:58:20.993 [Test worker] DEBUG org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=test}, physicalName=Name{catalog=null, schema=test}]
-18:58:20.997 [Test worker] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@148ee84c] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@5453e897]
-18:58:21.038 [Test worker] DEBUG org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: info.facilitator.bean.LegoBean
-18:58:21.059 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
-18:58:21.068 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Import with entity name LegoBean
-18:58:21.070 [Test worker] DEBUG org.hibernate.cfg.annotations.EntityBinder - Bind entity info.facilitator.bean.LegoBean on table Lego
-18:58:21.089 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(test.Lego), mappingColumn=Lego_Id, insertable=true, updatable=true, unique=false}
-18:58:21.092 [Test worker] DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [info.facilitator.bean.LegoBean] is safe
-18:58:21.092 [Test worker] DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : info.facilitator.bean.LegoBean
-18:58:21.092 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property id with lazy=false
-18:58:21.094 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [info.facilitator.bean.LegoBean:id]
-18:58:21.096 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for id
-18:58:21.098 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property id
-18:58:21.102 [Test worker] DEBUG org.hibernate.cfg.BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(Lego_Id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
-18:58:21.104 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(test.Lego), mappingColumn=date, insertable=true, updatable=true, unique=false}
-18:58:21.105 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property date with lazy=false
-18:58:21.105 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [info.facilitator.bean.LegoBean:date]
-18:58:21.105 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for date
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property date
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(test.Lego), mappingColumn=legoName, insertable=true, updatable=true, unique=false}
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property legoName with lazy=false
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [info.facilitator.bean.LegoBean:legoName]
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for legoName
-18:58:21.106 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property legoName
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(test.Lego), mappingColumn=price, insertable=true, updatable=true, unique=false}
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property price with lazy=false
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [info.facilitator.bean.LegoBean:price]
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for price
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property price
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(test.Lego), mappingColumn=priceForSale, insertable=true, updatable=true, unique=false}
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - MetadataSourceProcessor property priceForSale with lazy=false
-18:58:21.107 [Test worker] DEBUG org.hibernate.cfg.AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [info.facilitator.bean.LegoBean:priceForSale]
-18:58:21.108 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - building SimpleValue for priceForSale
-18:58:21.108 [Test worker] DEBUG org.hibernate.cfg.annotations.PropertyBinder - Building property priceForSale
-18:58:21.111 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for id
-18:58:21.111 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for date
-18:58:21.111 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for legoName
-18:58:21.111 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for price
-18:58:21.111 [Test worker] DEBUG org.hibernate.cfg.annotations.SimpleValueBinder - Starting fillSimpleValue for priceForSale
-18:58:21.112 [Test worker] DEBUG org.hibernate.mapping.PrimaryKey - Forcing column [lego_id] to be non-null as it is part of the primary key for table [lego]
-18:58:21.146 [Test worker] DEBUG org.hibernate.internal.SessionFactoryImpl - Building session factory
-18:58:21.147 [Test worker] DEBUG org.hibernate.cfg.Settings - SessionFactory name : null
-18:58:21.147 [Test worker] DEBUG org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
-18:58:21.147 [Test worker] DEBUG org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Statistics: disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Default entity-mode: pojo
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Default batch fetch size: -1
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Maximum outer join fetch depth: null
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Default null ordering: NONE
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
-18:58:21.148 [Test worker] DEBUG org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - JTA Track by Thread: enabled
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - Query language substitutions: {}
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - Named query checking : enabled
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - Second-level cache: disabled
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - Second-level query cache: disabled
-18:58:21.149 [Test worker] DEBUG org.hibernate.cfg.Settings - Second-level query cache factory: null
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Second-level cache region prefix: null
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JDBC batch size: 0
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Scrollable result sets: enabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Wrap result sets: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JDBC result set fetch size: null
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Connection release mode: AFTER_TRANSACTION
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - Generate SQL with comments: disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JPA compliance - query : disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JPA compliance - closed-handling : disabled
-18:58:21.150 [Test worker] DEBUG org.hibernate.cfg.Settings - JPA compliance - lists : disabled
-18:58:21.151 [Test worker] DEBUG org.hibernate.cfg.Settings - JPA compliance - transactions : disabled
-18:58:21.203 [Test worker] DEBUG org.hibernate.service.internal.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
-18:58:21.203 [Test worker] DEBUG org.hibernate.service.internal.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
-18:58:21.214 [Test worker] DEBUG org.hibernate.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-18:58:21.215 [Test worker] DEBUG org.hibernate.internal.SessionFactoryImpl - Instantiating session factory with properties: {dialect=org.hibernate.dialect.DerbyTenSevenDialect, java.specification.version=14, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1252, hibernate.dialect=org.hibernate.dialect.DerbyTenSevenDialect, org.gradle.test.worker=1, java.class.path=C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\7.0\\workerMain\\gradle-worker.jar;C:\\Users\\Ihor_Lazarkov\\Documents\\Projects\\Facilitation\\lego-scanner\\build\\classes\\java\\test;C:\\Users\\Ihor_Lazarkov\\Documents\\Projects\\Facilitation\\lego-scanner\\build\\resources\\test;C:\\Users\\Ihor_Lazarkov\\Documents\\Projects\\Facilitation\\lego-scanner\\build\\classes\\java\\main;C:\\Users\\Ihor_Lazarkov\\Documents\\Projects\\Facilitation\\lego-scanner\\build\\resources\\main;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-web\\2.4.3\\4f5554ea183af87e52d8c31bb82aada0d74c40b0\\spring-boot-starter-web-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-freemarker\\2.4.3\\f357804158056725a206e911ec9e3e480df83306\\spring-boot-starter-freemarker-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.derby\\derby\\10.14.2.0\\7efad40ef52fbb1f08142f07a83b42d29e47d8ce\\derby-10.14.2.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.hibernate\\hibernate-core\\5.5.0.Final\\cd584ade0d9e42af8bab196a9ad082bf8a3c60ab\\hibernate-core-5.5.0.Final.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-java\\3.141.59\\e8e20b741299cb8ffedbd2925a3ab69d08b41063\\selenium-java-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\io.github.bonigarcia\\webdrivermanager\\3.4.0\\8a4bc2e312f34b443add6d47d01af4d939540a1b\\webdrivermanager-3.4.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-test\\2.5.2\\226e09262316b1ff101797346b2ca56432880353\\spring-boot-starter-test-2.5.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-engine\\5.7.0\\d9044d6b45e2232ddd53fa56c15333e43d1749fd\\junit-jupiter-engine-5.7.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-engine\\1.7.1\\d276a968c57f5d60a421dedd1f8b6ca2fae09e86\\junit-platform-engine-1.7.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.platform\\junit-platform-commons\\1.7.1\\7c49f0074842d07f4335de2389d624a7437d1407\\junit-platform-commons-1.7.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-params\\5.7.1\\6f81b3c053433a8a40a378d2b4f056c5c31e50ff\\junit-jupiter-params-5.7.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter\\5.7.1\\a4a80ea9b0cca47781edcf9f2d4f1f4f7ce9436e\\junit-jupiter-5.7.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.mockito\\mockito-junit-jupiter\\3.6.28\\23149890c3b6047604a682aa3d47151d440e1bfa\\mockito-junit-jupiter-3.6.28.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.junit.jupiter\\junit-jupiter-api\\5.7.0\\b25f3815c4c1860a73041e733a14a0379d00c4d5\\junit-jupiter-api-5.7.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-json\\2.4.3\\7b26abb0a0379a00b58a2a50e010b29cf4f16b80\\spring-boot-starter-json-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter\\2.4.3\\fd8bc0fb5f5aaefb4d6c8b77eb61563aab840c11\\spring-boot-starter-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-tomcat\\2.4.3\\4ba28aae05a259625e7e92f8e7338c5e1d22de35\\spring-boot-starter-tomcat-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-webmvc\\5.3.4\\8dd52fbe8eafcc7c80998087ec6635baf7a98c20\\spring-webmvc-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.3.4\\d93829e24a50ed22e781f2302680a210cac5ee84\\spring-web-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.freemarker\\freemarker\\2.3.31\\cd4fc0942b4a8bdb19f3b669aa42136fb54feb55\\freemarker-2.3.31.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-context-support\\5.3.4\\a57000f628b50bd8eb57719aedb32c5330a4c8b4\\spring-context-support-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.hibernate.common\\hibernate-commons-annotations\\5.1.2.Final\\e59ffdbc6ad09eeb33507b39ffcf287679a498c8\\hibernate-commons-annotations-5.1.2.Final.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.jboss.logging\\jboss-logging\\3.4.1.Final\\40fd4d696c55793e996d1ff3c475833f836c2498\\jboss-logging-3.4.1.Final.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\javax.persistence\\javax.persistence-api\\2.2\\25665ac8c0b62f50e6488173233239120fc52c96\\javax.persistence-api-2.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.javassist\\javassist\\3.27.0-GA\\f63e6aa899e15eca8fdaa402a79af4c417252213\\javassist-3.27.0-GA.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-chrome-driver\\3.141.59\\67137314736c6a2f39a8aa59a562e9616ae5f77e\\selenium-chrome-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-edge-driver\\3.141.59\\fc09c66f2d0b33b0816d770761ad1d599ef0df29\\selenium-edge-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-firefox-driver\\3.141.59\\a99f2fe2a42747ed9809d4f62f51a9e1b336dde8\\selenium-firefox-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-ie-driver\\3.141.59\\677b9b414a3a9bb2aeea89042a7b326edeb13a82\\selenium-ie-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-opera-driver\\3.141.59\\6b11ed01182bfd8bb62ddeae34cf9eadd3cfc7ff\\selenium-opera-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-safari-driver\\3.141.59\\a32b5b88f46ea4b0356079f0d2e2217543923046\\selenium-safari-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-support\\3.141.59\\8735de5049acf0e761defc65ee5837d6541abaf5\\selenium-support-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-remote-driver\\3.141.59\\1c79ca890c312ff9916bd95df4f0c5182ec722d8\\selenium-remote-driver-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.mockito\\mockito-core\\3.6.28\\ad16f503916da658bd7b805816ae3b296f3eea4c\\mockito-core-3.6.28.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\net.bytebuddy\\byte-buddy\\1.10.20\\c5d2d12c75c5d52f8df33f4211e6dbd05a42b117\\byte-buddy-1.10.20.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\antlr\\antlr\\2.7.7\\83cd2cd674a217ade95a4bb83a8a14f351f48bd0\\antlr-2.7.7.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.jboss.spec.javax.transaction\\jboss-transaction-api_1.2_spec\\1.1.1.Final\\a8485cab9484dda36e9a8c319e76b5cc18797b58\\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.jboss\\jandex\\2.2.3.Final\\d3865101f0666b63586683bd811d754517f331ab\\jandex-2.2.3.Final.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml\\classmate\\1.5.1\\3fe0bed568c62df5e89f4f174c101eab25345b6c\\classmate-1.5.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\javax.xml.bind\\jaxb-api\\2.3.1\\8531ad5ac454cc2deb9d4d32c40c4d7451939b5d\\jaxb-api-2.3.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\javax.activation\\javax.activation-api\\1.2.0\\85262acf3ca9816f9537ca47d5adeabaead7cb16\\javax.activation-api-1.2.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.glassfish.jaxb\\jaxb-runtime\\2.3.3\\c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc\\jaxb-runtime-2.3.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.seleniumhq.selenium\\selenium-api\\3.141.59\\e006ffd3aa7841e6e9125d9e6691b3a6b7592b05\\selenium-api-3.141.59.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-exec\\1.3\\8dfb9facd0830a27b1b5f29f84593f0aeee7773b\\commons-exec-1.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\25.0-jre\\7319c34fa5866a85b6bad445adad69d402323129\\guava-25.0-jre.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okhttp3\\okhttp\\3.14.9\\3e6d101343c7ea687cd593e4990f73b25c878383\\okhttp-3.14.9.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.squareup.okio\\okio\\1.17.2\\78c7820b205002da4d2d137f6f312bd64b3d6049\\okio-1.17.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.jayway.jsonpath\\json-path\\2.4.0\\765a4401ceb2dc8d40553c2075eb80a8fa35c2ae\\json-path-2.4.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-starter-logging\\2.4.3\\64687abc2255d18cd6592cbb20fa3bee3379cec8\\spring-boot-starter-logging-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\ch.qos.logback\\logback-classic\\1.2.3\\7c4f3c474fb2c041d8028740440937705ebb473a\\logback-classic-1.2.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-to-slf4j\\2.13.3\\966f6fd1af4959d6b12bfa880121d4a2b164f857\\log4j-to-slf4j-2.13.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.slf4j\\jul-to-slf4j\\1.7.30\\d58bebff8cbf70ff52b59208586095f467656c30\\jul-to-slf4j-1.7.30.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.slf4j\\slf4j-api\\1.7.30\\b5a4b6d16ab13e34a88fae84c35cd5d68cac922c\\slf4j-api-1.7.30.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\commons-io\\commons-io\\2.6\\815893df5f31da2ece4040fe0a12fd44b577afaf\\commons-io-2.6.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.8.6\\9180733b7df8542621dc12e21e87557e8c99b8cb\\gson-2.8.6.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.11\\68e9a6adf7cf8eb7e9d31bbc554c7c75eeaac568\\commons-lang3-3.11.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.httpcomponents\\httpclient\\4.5.13\\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\\httpclient-4.5.13.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.rauschig\\jarchivelib\\1.0.0\\b9f0c716811deadd1b15599c3f169b796eda5373\\jarchivelib-1.0.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.jsoup\\jsoup\\1.11.3\\36da09a8f68484523fa2aaa100399d612b247d67\\jsoup-1.11.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apiguardian\\apiguardian-api\\1.1.0\\fc9dff4bb36d627bdc553de77e1f17efd790876c\\apiguardian-api-1.1.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.opentest4j\\opentest4j\\1.2.0\\28c11eb91f9b6d8e200631d46e20a7f407f2a046\\opentest4j-1.2.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-test-autoconfigure\\2.4.3\\ebd3ca5e9a9dc3968fa6a7833a3dfc4724ac994e\\spring-boot-test-autoconfigure-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-test\\2.4.3\\82b09a33a121fefadd34f53b3de5bbd1ecc9e71f\\spring-boot-test-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\jakarta.xml.bind\\jakarta.xml.bind-api\\2.3.3\\48e3b9cfc10752fba3521d6511f4165bea951801\\jakarta.xml.bind-api-2.3.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.assertj\\assertj-core\\3.18.1\\aaa02680dd92a568a4278bb40aa4a6305f632ec0\\assertj-core-3.18.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest\\2.2\\1820c0968dba3a11a1b30669bb1f01978a91dedc\\hamcrest-2.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.skyscreamer\\jsonassert\\1.5.0\\6c9d5fe2f59da598d9aefc1cfc6528ff3cf32df3\\jsonassert-1.5.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-test\\5.3.4\\aac34687e257733434a1cc6f7a3b3c7de7f055c5\\spring-test-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot-autoconfigure\\2.4.3\\2f8e1e682e55f70c8ea557982c7adb1256f41bcf\\spring-boot-autoconfigure-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework.boot\\spring-boot\\2.4.3\\de2bd17a8eb9bc3dfa629aa06f2e9fe3bf603c85\\spring-boot-2.4.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-context\\5.3.4\\fbeadeb0e4d272599a938ec345e99e5f9a76e919\\spring-context-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-aop\\5.3.4\\b7180a6427ab524bc1cbd31bf38dd2182632515f\\spring-aop-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-beans\\5.3.4\\ac6c5ea0ba82f555405f74104cf378f8071c6d25\\spring-beans-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-expression\\5.3.4\\42b71fa955e43a86471509aef14cefe756fc3794\\spring-expression-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-core\\5.3.4\\46c1f8abd9e02a292c42a257350f365cec152b5d\\spring-core-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.xmlunit\\xmlunit-core\\2.7.0\\4d014eac96329c70175116b185749765cee0aad5\\xmlunit-core-2.7.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\jakarta.annotation\\jakarta.annotation-api\\1.3.5\\59eb84ee0d616332ff44aba065f3888cf002cd2d\\jakarta.annotation-api-1.3.5.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.yaml\\snakeyaml\\1.27\\359d62567480b07a679dc643f82fc926b100eed5\\snakeyaml-1.27.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.datatype\\jackson-datatype-jdk8\\2.11.4\\e1540dea3c6c681ea4e335a960f730861ee3bedb\\jackson-datatype-jdk8-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.datatype\\jackson-datatype-jsr310\\2.11.4\\ce6fc76bba06623720e5a9308386b6ae74753f4d\\jackson-datatype-jsr310-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.module\\jackson-module-parameter-names\\2.11.4\\432e050d79f2282a66c320375d628f1b0842cb12\\jackson-module-parameter-names-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-databind\\2.11.4\\5d9f3d441f99d721b957e3497f0a6465c764fad4\\jackson-databind-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.tomcat.embed\\tomcat-embed-websocket\\9.0.43\\78232648dde1a5fd5093f0a3999e593d208e2eab\\tomcat-embed-websocket-9.0.43.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.tomcat.embed\\tomcat-embed-core\\9.0.43\\1d102277426bdd5b12f048731a91665bb69347d1\\tomcat-embed-core-9.0.43.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.glassfish\\jakarta.el\\3.0.3\\dab46ee1ee23f7197c13d7c40fce14817c9017df\\jakarta.el-3.0.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.glassfish.jaxb\\txw2\\2.3.3\\12f70b0ea4fc1ad45315e842f63f7c9a46f46530\\txw2-2.3.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.sun.istack\\istack-commons-runtime\\3.0.11\\4293b5f4e4e89d598f62bb2ba73b32132e7c3a27\\istack-commons-runtime-3.0.11.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.sun.activation\\jakarta.activation\\1.2.2\\74548703f9851017ce2f556066659438019e7eb5\\jakarta.activation-1.2.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.findbugs\\jsr305\\1.3.9\\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\\jsr305-1.3.9.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-compat-qual\\2.0.0\\fc89b03860d11d6213d0154a62bcd1c2f69b9efa\\checker-compat-qual-2.0.0.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.1.3\\39b109f2cd352b2d71b52a3b5a1a9850e1dc304b\\error_prone_annotations-2.1.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.google.j2objc\\j2objc-annotations\\1.1\\ed28ded51a8b1c6b112568def5f4b455e6809019\\j2objc-annotations-1.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.codehaus.mojo\\animal-sniffer-annotations\\1.14\\775b7e22fb10026eed3f86e8dc556dfafe35f2d5\\animal-sniffer-annotations-1.14.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.httpcomponents\\httpcore\\4.4.14\\9dd1a631c082d92ecd4bd8fd4cf55026c720a8c1\\httpcore-4.4.14.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\commons-codec\\commons-codec\\1.15\\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\\commons-codec-1.15.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-compress\\1.18\\1191f9f2bc0c47a8cce69193feb1ff0a8bcb37d5\\commons-compress-1.18.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\net.minidev\\json-smart\\2.3\\7396407491352ce4fa30de92efb158adb76b5b\\json-smart-2.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\jakarta.activation\\jakarta.activation-api\\1.2.2\\99f53adba383cb1bf7c3862844488574b559621f\\jakarta.activation-api-1.2.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\net.bytebuddy\\byte-buddy-agent\\1.10.20\\8391bfea9da53fd92edd4a453571ef70b3aae09f\\byte-buddy-agent-1.10.20.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.objenesis\\objenesis\\3.1\\48f12deaae83a8dfc3775d830c9fd60ea59bbbca\\objenesis-3.1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.vaadin.external.google\\android-json\\0.0.20131108.vaadin1\\fa26d351fe62a6a17f5cda1287c1c6110dec413f\\android-json-0.0.20131108.vaadin1.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-jcl\\5.3.4\\ca012eb4e9e57f767aa9d5e51fe9a09b28140808\\spring-jcl-5.3.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-annotations\\2.11.4\\2c3f5c079330f3a01726686a078979420f547ae4\\jackson-annotations-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-core\\2.11.4\\593f7b18bab07a76767f181e2a2336135ce82cc4\\jackson-core-2.11.4.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\net.minidev\\accessors-smart\\1.2\\c592b500269bfde36096641b01238a8350f8aa31\\accessors-smart-1.2.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\ch.qos.logback\\logback-core\\1.2.3\\864344400c3d4d92dfeb0a305dc87d953677c03c\\logback-core-1.2.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.13.3\\ec1508160b93d274b1add34419b897bae84c6ca9\\log4j-api-2.13.3.jar;C:\\Users\\Ihor_Lazarkov\\.gradle\\caches\\modules-2\\files-2.1\\org.ow2.asm\\asm\\5.0.4\\da08b8cce7bbf903602a25a3a163ae252435795\\asm-5.0.4.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=create, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=America/Chicago, java.vm.specification.version=14, os.name=Windows 10, current_session_context_class=thread, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=C:\Users\Ihor_Lazarkov\Documents\documents\Ihor\jdk\jdk-14.0.1\bin, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1', jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Ihor_Lazarkov, user.language=en, java.specification.vendor=Oracle Corporation, org.gradle.native=false, hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider, java.version.date=2020-04-14, java.home=C:\Users\Ihor_Lazarkov\Documents\documents\Ihor\jdk\jdk-14.0.1, file.separator=\, java.vm.compressedOopsMode=32-bit, line.separator=
-, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, cache.provider_class=org.hibernate.cache.NoCacheProvider, hibernate.hbm2ddl.auto=create, user.script=, connection.password=password, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=14.0.1+7, user.name=Ihor_Lazarkov, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:derby:data;create=true, connection.pool_size=1, file.encoding=windows-1252, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, hibernate.current_session_context_class=thread, show_sql=true, hibernate.connection.driver_class=org.apache.derby.jdbc.EmbeddedDriver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\IHOR_L~1\AppData\Local\Temp\, java.version=14.0.1, user.dir=C:\Users\Ihor_Lazarkov\Documents\Projects\Facilitation\lego-scanner, os.arch=amd64, connection.username=application, java.vm.specification.name=Java Virtual Machine Specification, hibernate.default_schema=test, hibernate.connection.password=****, org.gradle.internal.worker.tmpdir=C:\Users\Ihor_Lazarkov\Documents\Projects\Facilitation\lego-scanner\build\tmp\test\work, sun.os.patch.level=, connection.driver_class=org.apache.derby.jdbc.EmbeddedDriver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@35ef5c5, java.library.path=C:\Users\Ihor_Lazarkov\Documents\documents\Ihor\jdk\jdk-14.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Gradle\gradle-6.5\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Ihor_Lazarkov\AppData\Local\Microsoft\WindowsApps;C:\Users\Ihor_Lazarkov\AppData\Roaming\npm;;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=14.0.1+7, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.connection.pool_size=1, connection.url=jdbc:derby:data;create=true, java.class.version=58.0}
-18:58:21.229 [Test worker] DEBUG org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
-18:58:21.230 [Test worker] DEBUG org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
-18:58:21.231 [Test worker] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@148ee84c] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@17467796]
-18:58:21.287 [Test worker] DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [info.facilitator.bean.LegoBean] is safe
-18:58:21.287 [Test worker] DEBUG org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : info.facilitator.bean.LegoBean
-18:58:21.489 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: info.facilitator.bean.LegoBean
-18:58:21.490 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select Lego_Id from test.Lego where Lego_Id =?
-18:58:21.490 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select legobean_.Lego_Id, legobean_.date as date2_0_, legobean_.legoName as legoname3_0_, legobean_.price as price4_0_, legobean_.priceForSale as pricefor5_0_ from test.Lego legobean_ where legobean_.Lego_Id=?
-18:58:21.490 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into test.Lego (date, legoName, price, priceForSale, Lego_Id) values (?, ?, ?, ?, ?)
-18:58:21.490 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update test.Lego set date=?, legoName=?, price=?, priceForSale=? where Lego_Id=?
-18:58:21.490 [Test worker] DEBUG org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from test.Lego where Lego_Id=?
-18:58:21.526 [Test worker] DEBUG org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@503c9303]
-18:58:21.527 [Test worker] DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : date
-18:58:21.528 [Test worker] DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : legoName
-18:58:21.528 [Test worker] DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : price
-18:58:21.528 [Test worker] DEBUG org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : priceForSale
-18:58:21.528 [Test worker] DEBUG org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-18:58:21.537 [Test worker] DEBUG org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-18:58:21.541 [Test worker] DEBUG org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=info.facilitator.bean.LegoBean)
-    - Returns
-       - EntityReturnImpl(entity=info.facilitator.bean.LegoBean, querySpaceUid=<gen:0>, path=info.facilitator.bean.LegoBean)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=info.facilitator.bean.LegoBean)
-          - SQL table alias mapping - legobean0_
-          - alias suffix - 0_
-          - suffixed key columns - {lego_id1_0_0_}
+  <testcase name="testHomePage()" classname="LegoPersistenceTest" time="2.259"/>
+  <testcase name="testUpdate()" classname="LegoPersistenceTest" time="0.009"/>
+  <system-out><![CDATA[21:05:35.218 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:05:35.231 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:05:35.286 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [LegoPersistenceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:05:35.302 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [LegoPersistenceTest], using SpringBootContextLoader
+21:05:35.306 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [LegoPersistenceTest]: class path resource [LegoPersistenceTest-context.xml] does not exist
+21:05:35.307 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [LegoPersistenceTest]: class path resource [LegoPersistenceTestContext.groovy] does not exist
+21:05:35.307 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [LegoPersistenceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:05:35.370 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [LegoPersistenceTest]
+21:05:35.490 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [LegoPersistenceTest]: using defaults.
+21:05:35.490 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+21:05:35.502 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+21:05:35.502 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+21:05:35.503 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e97d38, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@311085b4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@d41f8bd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@23ae054e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6964acbe, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5c6cb903, org.springframework.test.context.event.EventPublishingTestExecutionListener@5eea2623, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@dbddcc5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41f09090, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@786d8d0c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77b9771c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1481c6da, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51b0b0ca]
+21:05:35.506 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4952d221 testClass = LegoPersistenceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1afd52c7 testClass = LegoPersistenceTest, locations = '{}', classes = '{class org.legoscanner.web.controllers.GenericController, class org.legoscanner.web.serviceimplementation.DefaultFetcher}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@1e1d1b92, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@810edf1, [ImportsContextCustomizer@7d847fb0 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@54259ea3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@499a9a79, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5c39340d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@5e9c9f84], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+21:05:35.545 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 
-18:58:21.543 [Test worker] DEBUG org.hibernate.loader.entity.plan.EntityLoader - Static select for entity info.facilitator.bean.LegoBean [NONE]: select legobean0_.Lego_Id as lego_id1_0_0_, legobean0_.date as date2_0_0_, legobean0_.legoName as legoname3_0_0_, legobean0_.price as price4_0_0_, legobean0_.priceForSale as pricefor5_0_0_ from test.Lego legobean0_ where legobean0_.Lego_Id=?
-18:58:21.576 [Test worker] DEBUG org.hibernate.SQL - drop table test.Lego
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-08-02 21:05:35.873  INFO 15780 --- [    Test worker] LegoPersistenceTest                      : Starting LegoPersistenceTest using Java 14.0.1 on EPUSPRIW02BF with PID 15780 (started by Ihor_Lazarkov in C:\Users\Ihor_Lazarkov\Documents\Projects\Facilitation\lego-scanner)
+2021-08-02 21:05:35.877  INFO 15780 --- [    Test worker] LegoPersistenceTest                      : No active profile set, falling back to default profiles: default
+2021-08-02 21:05:36.340  INFO 15780 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-08-02 21:05:36.340  INFO 15780 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-08-02 21:05:36.564  INFO 15780 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 224 ms
+2021-08-02 21:05:36.613  INFO 15780 --- [    Test worker] LegoPersistenceTest                      : Started LegoPersistenceTest in 1.059 seconds (JVM running for 2.401)
+2021-08-02 21:05:37.128  INFO 15780 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.5.0.Final
+2021-08-02 21:05:37.429  INFO 15780 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-08-02 21:05:37.530  WARN 15780 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-08-02 21:05:37.704  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: using driver [org.apache.derby.jdbc.EmbeddedDriver] at URL [jdbc:derby:data;create=true]
+2021-08-02 21:05:37.705  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001001: Connection properties: {password=****, user=application}
+2021-08-02 21:05:37.705  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001003: Autocommit mode: false
+2021-08-02 21:05:37.708  INFO 15780 --- [    Test worker] .c.i.DriverManagerConnectionProviderImpl : HHH000115: Hibernate connection pool size: 1 (min=1)
+2021-08-02 21:05:37.951  INFO 15780 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.DerbyTenSevenDialect
 Hibernate: drop table test.Lego
-18:58:21.578 [Test worker] INFO org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5213bfb6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-18:58:21.654 [Test worker] DEBUG org.hibernate.SQL - drop sequence test.hibernate_sequence restrict
+2021-08-02 21:05:38.574  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@59632280] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 Hibernate: drop sequence test.hibernate_sequence restrict
-18:58:21.661 [Test worker] DEBUG org.hibernate.SQL - create sequence test.hibernate_sequence start with 1 increment by 1
 Hibernate: create sequence test.hibernate_sequence start with 1 increment by 1
-18:58:21.661 [Test worker] INFO org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2dd81d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-18:58:21.666 [Test worker] DEBUG org.hibernate.SQL - create table test.Lego (Lego_Id bigint not null, date varchar(255), legoName varchar(255), price varchar(255), priceForSale varchar(255), primary key (Lego_Id))
+2021-08-02 21:05:38.632  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a50c865] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 Hibernate: create table test.Lego (Lego_Id bigint not null, date varchar(255), legoName varchar(255), price varchar(255), priceForSale varchar(255), primary key (Lego_Id))
-18:58:21.697 [Test worker] DEBUG org.hibernate.query.spi.NamedQueryRepository - Checking 0 named HQL queries
-18:58:21.697 [Test worker] DEBUG org.hibernate.query.spi.NamedQueryRepository - Checking 0 named SQL queries
-18:58:21.702 [Test worker] DEBUG org.hibernate.service.internal.SessionFactoryServiceRegistryImpl - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
-18:58:21.708 [Test worker] DEBUG org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@1d826c08
-18:58:21.710 [Test worker] DEBUG org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 7167387d-efc0-4e10-8675-09ffbfe19ff8 (<unnamed>)
-18:58:21.711 [Test worker] DEBUG org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
-18:58:21.757 [Test worker] DEBUG org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
-18:58:21.773 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
-18:58:21.774 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
-18:58:21.776 [Test worker] DEBUG org.hibernate.SQL - values next value for test.hibernate_sequence
-Hibernate: values next value for test.hibernate_sequence
-18:58:21.787 [Test worker] DEBUG org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 1
-18:58:21.787 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-18:58:21.788 [Test worker] DEBUG org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 1, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-18:58:21.802 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
-18:58:21.802 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-18:58:21.803 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-18:58:21.806 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-18:58:21.806 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-18:58:21.807 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
-18:58:21.808 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - info.facilitator.bean.LegoBean{date=2021-07-12T18:58:21.771530, legoName=TestLego, price=100, id=1, priceForSale=50}
-18:58:21.811 [Test worker] DEBUG org.hibernate.SQL - insert into test.Lego (date, legoName, price, priceForSale, Lego_Id) values (?, ?, ?, ?, ?)
-Hibernate: insert into test.Lego (date, legoName, price, priceForSale, Lego_Id) values (?, ?, ?, ?, ?)
-18:58:21.832 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:21.832 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:21.846 [Test worker] DEBUG org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@26d2b67
-18:58:21.870 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: From info.facilitator.bean.LegoBean Order By id desc
-18:58:21.873 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:21.880 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
- \-[QUERY] Node: 'query'
-    +-[SELECT_FROM] Node: 'SELECT_FROM'
-    |  \-[FROM] Node: 'From'
-    |     \-[RANGE] Node: 'RANGE'
-    |        \-[DOT] Node: '.'
-    |           +-[DOT] Node: '.'
-    |           |  +-[DOT] Node: '.'
-    |           |  |  +-[IDENT] Node: 'info'
-    |           |  |  \-[IDENT] Node: 'facilitator'
-    |           |  \-[IDENT] Node: 'bean'
-    |           \-[IDENT] Node: 'LegoBean'
-    \-[ORDER] Node: 'Order'
-       +-[IDENT] Node: 'id'
-       \-[DESCENDING] Node: 'desc'
-
-18:58:21.905 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
-18:58:21.920 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : info.facilitator.bean.LegoBean (<no alias>) -> legobean0_
-18:58:21.921 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias} -> {synthetic-alias}
-18:58:21.922 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : id -> org.hibernate.type.LongType@a86b8c2
-18:58:21.923 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : {synthetic-alias}.id -> legobean0_.Lego_Id
-18:58:21.923 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
-18:58:21.923 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} test.Lego legobean0_ ) ( Order ( legobean0_.Lego_Id {synthetic-alias} id ) desc ) )
-18:58:21.927 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
-18:58:21.936 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
- \-QueryNode
-    +-SelectClause
-    | referencedTables(entity LegoBean): [test.Lego]
-    |  +-SelectExpressionImpl
-    |  | persister: SingleTableEntityPersister(info.facilitator.bean.LegoBean)
-    |  \-SqlFragment
-    +-FromClause
-    |  \-FromElement
-    \-OrderByClause
-       +-DotNode
-       | persister: SingleTableEntityPersister(info.facilitator.bean.LegoBean)
-       | path: {synthetic-alias}.id
-       |  +-IdentNode
-       |  | persister: SingleTableEntityPersister(info.facilitator.bean.LegoBean)
-       |  | originalText: {synthetic-alias}
-       |  \-IdentNode
-       |    persister: null
-       |    originalText: id
-       \-SqlNode
-
-18:58:21.938 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [test.Lego legobean0_]
-18:58:21.939 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
-18:58:21.940 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
- \-[SELECT] QueryNode: 'SELECT'  querySpaces (test.Lego)
-    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
-    |  +-[SELECT_EXPR] SelectExpressionImpl: 'legobean0_.Lego_Id as lego_id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=test.Lego,tableAlias=legobean0_,origin=null,columns={,className=info.facilitator.bean.LegoBean}}}
-    |  \-[SQL_TOKEN] SqlFragment: 'legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_'
-    +-[FROM] FromClause: 'From' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[legobean0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
-    |  \-[FROM_FRAGMENT] FromElement: 'test.Lego legobean0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=test.Lego,tableAlias=legobean0_,origin=null,columns={,className=info.facilitator.bean.LegoBean}}
-    \-[ORDER] OrderByClause: 'Order'
-       +-[DOT] DotNode: 'legobean0_.Lego_Id' {propertyName=id,dereferenceType=PRIMITIVE,getPropertyPath=id,path={synthetic-alias}.id,tableAlias=legobean0_,className=info.facilitator.bean.LegoBean,classAlias=null}
-       |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
-       |  \-[IDENT] IdentNode: 'id' {originalText=id}
-       \-[DESCENDING] SqlNode: 'desc'
-
-18:58:21.940 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:21.945 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: From info.facilitator.bean.LegoBean Order By id desc
-18:58:21.946 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_ order by legobean0_.Lego_Id desc
-18:58:21.946 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:21.957 [Test worker] DEBUG org.hibernate.SQL - select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_ order by legobean0_.Lego_Id desc
-Hibernate: select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_ order by legobean0_.Lego_Id desc
-18:58:21.979 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
-18:58:21.981 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[info.facilitator.bean.LegoBean#1]
-18:58:21.984 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:21.990 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
-18:58:21.992 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
-18:58:21.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-18:58:21.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-18:58:21.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
-18:58:21.993 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-18:58:21.993 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
-18:58:21.994 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - info.facilitator.bean.LegoBean{date=2021-07-12T18:58:21.771530, legoName=TestLego, price=100, id=1, priceForSale=50}
-18:58:22.000 [Test worker] DEBUG org.hibernate.SQL - delete from test.Lego where Lego_Id=?
-Hibernate: delete from test.Lego where Lego_Id=?
-18:58:22.013 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.013 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.021 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
-18:58:22.022 [Test worker] DEBUG org.hibernate.SQL - values next value for test.hibernate_sequence
-Hibernate: values next value for test.hibernate_sequence
-18:58:22.023 [Test worker] DEBUG org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 2
-18:58:22.023 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-18:58:22.023 [Test worker] DEBUG org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 2, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-18:58:22.023 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
-18:58:22.023 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-18:58:22.023 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-18:58:22.023 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-18:58:22.024 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-18:58:22.024 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
-18:58:22.024 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - info.facilitator.bean.LegoBean{date=2021-07-12T18:58:22.021533700, legoName=TestLego, price=100, id=2, priceForSale=50}
-18:58:22.024 [Test worker] DEBUG org.hibernate.SQL - insert into test.Lego (date, legoName, price, priceForSale, Lego_Id) values (?, ?, ?, ?, ?)
-Hibernate: insert into test.Lego (date, legoName, price, priceForSale, Lego_Id) values (?, ?, ?, ?, ?)
-18:58:22.025 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.025 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.026 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
-18:58:22.029 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
-18:58:22.029 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-18:58:22.029 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-18:58:22.030 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
-18:58:22.030 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-18:58:22.030 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
-18:58:22.030 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - info.facilitator.bean.LegoBean{date=2021-07-12T18:58:22.021533700, legoName=Test Lego Update, price=100, id=2, priceForSale=50}
-18:58:22.030 [Test worker] DEBUG org.hibernate.SQL - update test.Lego set date=?, legoName=?, price=?, priceForSale=? where Lego_Id=?
-Hibernate: update test.Lego set date=?, legoName=?, price=?, priceForSale=? where Lego_Id=?
-18:58:22.047 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.047 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.048 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: From info.facilitator.bean.LegoBean
-18:58:22.049 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:22.050 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
- \-[QUERY] Node: 'query'
-    \-[SELECT_FROM] Node: 'SELECT_FROM'
-       \-[FROM] Node: 'From'
-          \-[RANGE] Node: 'RANGE'
-             \-[DOT] Node: '.'
-                +-[DOT] Node: '.'
-                |  +-[DOT] Node: '.'
-                |  |  +-[IDENT] Node: 'info'
-                |  |  \-[IDENT] Node: 'facilitator'
-                |  \-[IDENT] Node: 'bean'
-                \-[IDENT] Node: 'LegoBean'
-
-18:58:22.050 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
-18:58:22.050 [Test worker] DEBUG org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : info.facilitator.bean.LegoBean (<no alias>) -> legobean0_
-18:58:22.051 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
-18:58:22.051 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} test.Lego legobean0_ ) )
-18:58:22.051 [Test worker] DEBUG org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
-18:58:22.051 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
- \-QueryNode
-    +-SelectClause
-    | referencedTables(entity LegoBean): [test.Lego]
-    |  +-SelectExpressionImpl
-    |  | persister: SingleTableEntityPersister(info.facilitator.bean.LegoBean)
-    |  \-SqlFragment
-    \-FromClause
-       \-FromElement
-
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [test.Lego legobean0_]
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
- \-[SELECT] QueryNode: 'SELECT'  querySpaces (test.Lego)
-    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
-    |  +-[SELECT_EXPR] SelectExpressionImpl: 'legobean0_.Lego_Id as lego_id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=test.Lego,tableAlias=legobean0_,origin=null,columns={,className=info.facilitator.bean.LegoBean}}}
-    |  \-[SQL_TOKEN] SqlFragment: 'legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_'
-    \-[FROM] FromClause: 'From' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[legobean0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
-       \-[FROM_FRAGMENT] FromElement: 'test.Lego legobean0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=test.Lego,tableAlias=legobean0_,origin=null,columns={,className=info.facilitator.bean.LegoBean}}
-
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: From info.facilitator.bean.LegoBean
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_
-18:58:22.052 [Test worker] DEBUG org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
-18:58:22.053 [Test worker] DEBUG org.hibernate.SQL - select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_
-Hibernate: select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_
-18:58:22.058 [Test worker] DEBUG org.hibernate.loader.Loader - Result set row: 0
-18:58:22.058 [Test worker] DEBUG org.hibernate.loader.Loader - Result row: EntityKey[info.facilitator.bean.LegoBean#2]
-18:58:22.058 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.061 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
-18:58:22.061 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
-18:58:22.061 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-18:58:22.061 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-18:58:22.061 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
-18:58:22.061 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-18:58:22.061 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
-18:58:22.062 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - info.facilitator.bean.LegoBean{date=2021-07-12T18:58:22.021533700, legoName=Test Lego Update, price=100, id=2, priceForSale=50}
-18:58:22.062 [Test worker] DEBUG org.hibernate.SQL - delete from test.Lego where Lego_Id=?
-Hibernate: delete from test.Lego where Lego_Id=?
-18:58:22.064 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.064 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-18:58:22.068 [Test worker] DEBUG org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
-18:58:22.068 [Test worker] DEBUG org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing
-18:58:22.069 [Test worker] DEBUG org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@580773a4] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@17467796]
-18:58:22.069 [Test worker] DEBUG org.hibernate.service.internal.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
-18:58:22.069 [Test worker] INFO org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:derby:data;create=true]
-18:58:22.070 [Test worker] DEBUG org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+Hibernate: select legobean0_.Lego_Id as lego_id1_0_, legobean0_.date as date2_0_, legobean0_.legoName as legoname3_0_, legobean0_.price as price4_0_, legobean0_.priceForSale as pricefor5_0_ from test.Lego legobean0_ order by legobean0_.legoName, legobean0_.date desc
+2021-08-02 21:05:38.825  INFO 15780 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001008: Cleaning up connection pool [jdbc:derby:data;create=true]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
