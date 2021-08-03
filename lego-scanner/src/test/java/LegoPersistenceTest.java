@@ -1,79 +1,53 @@
+import static org.assertj.core.api.Assertions.assertThat;
+
 import info.facilitator.bean.LegoBean;
 import info.facilitator.bean.LegoBeanBuilder;
 import info.facilitator.bean.dao.LegoDAO;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
+import org.junit.jupiter.api.Test;
+import org.legoscanner.web.controllers.GenericController;
+import org.legoscanner.web.serviceimplementation.DefaultFetcher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.servlet.ModelAndView;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import org.junit.jupiter.api.*;
-
-import java.util.List;
-
+@SpringBootTest(classes = {
+        GenericController.class,
+        DefaultFetcher.class
+})
+@AutoConfigureMockMvc
 public class LegoPersistenceTest {
 
-    private LegoBean bean;
-    private static Session session;
-    private static SessionFactory sessionFactory;
+    @Autowired
+    private MockMvc mvc;
 
-    @BeforeAll
-    public static void setUpAll() {
-        Configuration configuration = new Configuration();
-        configuration.configure();
-        sessionFactory = configuration.buildSessionFactory();
-        session = sessionFactory.openSession();
+    @Test
+    public void testHomePage() throws Exception {
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/"))
+                .andExpect(status().isOk())
+                .andExpect(model().attributeExists("legos"))
+                .andExpect(view().name("home"))
+                .andReturn();
+
+        ModelAndView mv = result.getModelAndView();
+
+        assertThat(mv.getModel()).isNotNull();
+        assertThat(mv.getModel()).isNotEmpty();
     }
 
-    @AfterAll
-    public static void tearDownAll() {
-        session.close();
-        sessionFactory.close();
-    }
-
-    @BeforeEach
-    public void setUp() {
-        bean = new LegoBeanBuilder().createBean()
+    @Test
+    public void testIsToday(){
+        LegoBean testLego = new LegoBeanBuilder().createBean()
                 .setLegoName("TestLego")
-                .setPrice("100")
-                .setSalePrice("50")
+                .setPrice("100.00")
+                .setSalePrice("99.99")
                 .build();
 
-        session.beginTransaction();
-        session.save(bean);
-        session.getTransaction().commit();
-    }
-
-    @AfterEach
-    public void tearDown(){
-        session.beginTransaction();
-        session.delete(bean);
-        session.getTransaction().commit();
-    }
-
-    @Test
-    public void testPersistence() {
-        Query<LegoBean> query = session.createQuery("From LegoBean Order By id desc", LegoBean.class);
-        List<LegoBean> resultList = query.getResultList();
-        assertTrue(bean.equals(resultList.get(0)));
-    }
-
-    @Test
-    public void testUpdate() {
-
-        final String TEST_TEXT = "Test Lego Update";
-
-        bean.setLegoName(TEST_TEXT);
-        session.beginTransaction();
-        if (LegoDAO.isToday().test(bean))
-            session.update(bean);
-        else
-            session.save(bean);
-        session.getTransaction().commit();
-
-        List<LegoBean> result = session.createQuery("From LegoBean", LegoBean.class).getResultList();
-        assertEquals(1, result.size());
-        assertEquals(TEST_TEXT, result.get(0).getLegoName());
+        assertThat(LegoDAO.isToday().test(testLego)).isEqualTo(true);
     }
 }
