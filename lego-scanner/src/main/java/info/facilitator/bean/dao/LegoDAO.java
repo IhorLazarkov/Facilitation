@@ -24,6 +24,9 @@ public class LegoDAO {
     public static BiConsumer<Session, LegoBean> update() {
         return Session::update;
     }
+    public static BiConsumer<Session, LegoBean> delete() {
+        return Session::delete;
+    }
 
     public static Predicate<LegoBean> isToday() {
         return bean -> {
