@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiConsumer;
+import java.util.function.Predicate;
 
 public class LegoScannerApp {
 
@@ -22,6 +23,7 @@ public class LegoScannerApp {
 
         final BiConsumer<Session, LegoBean> update = LegoDAO.update();
         final BiConsumer<Session, LegoBean> persist = LegoDAO.persist();
+        final Predicate<LegoBean> isToday = LegoDAO.isToday();
 
         WebDriverManager.chromedriver().setup();
 
@@ -43,7 +45,7 @@ public class LegoScannerApp {
 
                     Query<LegoBean> query = session.createQuery("from LegoBean Where legoName =:name", LegoBean.class);
                     query.setParameter("name", lego.getLegoName());
-                    Optional<LegoBean> first = query.getResultStream().filter(LegoDAO.isToday()).findFirst();
+                    Optional<LegoBean> first = query.getResultStream().filter(isToday).findFirst();
 
                     if (first.isEmpty()) {
                         persist.accept(session,lego);
