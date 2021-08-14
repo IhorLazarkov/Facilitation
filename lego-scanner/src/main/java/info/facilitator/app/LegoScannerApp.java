@@ -6,6 +6,7 @@ import info.facilitator.page.LegoSalesPage;
 import info.facilitator.page.LegoWelcomePage;
 import info.facilitator.persister.SessionProvider;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,10 +14,15 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.BiConsumer;
 
 public class LegoScannerApp {
 
     public static void main(String[] args) {
+
+        final BiConsumer<Session, LegoBean> update = LegoDAO.update();
+        final BiConsumer<Session, LegoBean> persist = LegoDAO.persist();
+
         WebDriverManager.chromedriver().setup();
 
         final WebDriver driver = new ChromeDriver();
@@ -40,12 +46,12 @@ public class LegoScannerApp {
                     Optional<LegoBean> first = query.getResultStream().filter(LegoDAO.isToday()).findFirst();
 
                     if (first.isEmpty()) {
-                        LegoDAO.persist(session, lego);
+                        persist.accept(session,lego);
                     } else {
                         first.get().setPrice(lego.getPrice());
                         first.get().setPriceForSale(lego.getPriceForSale());
                         first.get().setDate(lego.getDate());
-                        LegoDAO.update(session, first.get());
+                        update.accept(session, first.get());
                     }
                 });
             });

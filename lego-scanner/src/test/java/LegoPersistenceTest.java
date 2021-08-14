@@ -1,5 +1,3 @@
-import static org.assertj.core.api.Assertions.assertThat;
-
 import info.facilitator.bean.LegoBean;
 import info.facilitator.bean.LegoBeanBuilder;
 import info.facilitator.bean.dao.LegoDAO;
@@ -14,6 +12,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.web.servlet.ModelAndView;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest(classes = {
@@ -41,7 +40,7 @@ public class LegoPersistenceTest {
     }
 
     @Test
-    public void testIsToday(){
+    public void testIsToday() {
         LegoBean testLego = new LegoBeanBuilder().createBean()
                 .setLegoName("TestLego")
                 .setPrice("100.00")
