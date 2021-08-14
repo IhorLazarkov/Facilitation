@@ -1,29 +1,29 @@
-org/legoscanner/web/app/Application.java
- org.legoscanner.web.app.Application
-info/facilitator/page/LegoWelcomePage.java
- info.facilitator.page.LegoWelcomePage
 info/facilitator/bean/dao/LegoDAO.java
  info.facilitator.bean.dao.LegoDAO
+info/facilitator/page/LegoWelcomePage.java
+ info.facilitator.page.LegoWelcomePage
+org/legoscanner/web/app/Application.java
+ org.legoscanner.web.app.Application
 info/facilitator/page/LegoWelcomePageBanner.java
  info.facilitator.page.LegoWelcomePageBanner
 info/facilitator/persister/SessionProvider.java
  info.facilitator.persister.SessionProvider
  info.facilitator.persister.SessionProvider$DatabaseFunctional
-info/facilitator/page/LegoSalesPage.java
- info.facilitator.page.LegoSalesPage
 info/facilitator/page/AcceptCookiePage.java
  info.facilitator.page.AcceptCookiePage
-org/legoscanner/web/components/ViewResolverComponent.java
- org.legoscanner.web.components.ViewResolverComponent
+info/facilitator/page/LegoSalesPage.java
+ info.facilitator.page.LegoSalesPage
 info/facilitator/bean/LegoBean.java
  info.facilitator.bean.LegoBean
+org/legoscanner/web/components/ViewResolverComponent.java
+ org.legoscanner.web.components.ViewResolverComponent
 org/legoscanner/web/controllers/GenericController.java
  org.legoscanner.web.controllers.GenericController
 info/facilitator/app/LegoScannerApp.java
  info.facilitator.app.LegoScannerApp
 org/legoscanner/web/serviceimplementation/DefaultFetcher.java
  org.legoscanner.web.serviceimplementation.DefaultFetcher
-org/legoscanner/web/config/SwaggerConfig.java
- org.legoscanner.web.config.SwaggerConfig
 info/facilitator/bean/LegoBeanBuilder.java
  info.facilitator.bean.LegoBeanBuilder
+org/legoscanner/web/config/SwaggerConfig.java
+ org.legoscanner.web.config.SwaggerConfig

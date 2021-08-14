@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         DefaultFetcher.class
 })
 @AutoConfigureMockMvc
-public class LegoPersistenceTest {
+public class LegoWebAppTest {
 
     @Autowired
     private MockMvc mvc;
@@ -37,16 +37,5 @@ public class LegoPersistenceTest {
 
         assertThat(mv.getModel()).isNotNull();
         assertThat(mv.getModel()).isNotEmpty();
-    }
-
-    @Test
-    public void testIsToday() {
-        LegoBean testLego = new LegoBeanBuilder().createBean()
-                .setLegoName("TestLego")
-                .setPrice("100.00")
-                .setSalePrice("99.99")
-                .build();
-
-        assertThat(LegoDAO.isToday().test(testLego)).isEqualTo(true);
     }
 }
