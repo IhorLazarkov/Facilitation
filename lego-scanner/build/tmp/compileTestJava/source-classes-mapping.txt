@@ -1,2 +1,4 @@
-LegoPersistenceTest.java
- LegoPersistenceTest
+LegoScannerTest.java
+ LegoScannerTest
+LegoWebAppTest.java
+ LegoWebAppTest
