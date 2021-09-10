@@ -17,6 +17,10 @@ public class LegoBean {
     private String priceForSale;
     private String date;
 
+    public long getId() {
+        return id;
+    }
+
     public String getLegoName() {
         return legoName;
     }
