@@ -5,9 +5,7 @@ import info.facilitator.persister.SessionProvider;
 import io.swagger.annotations.ApiOperation;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,7 +13,6 @@ import javax.websocket.server.PathParam;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Function;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @RestController
@@ -26,7 +23,7 @@ public class GenericController {
     @Autowired
     private Function<Session, List<LegoBean>> fetcher;
 
-    @ApiOperation(value = "Get all data", response = ModelAndView.class)
+    @ApiOperation(value = "Get all records", response = ModelAndView.class)
     @GetMapping("/")
     public ModelAndView index() {
         SessionProvider.withSession(session -> {
