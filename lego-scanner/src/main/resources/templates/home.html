@@ -5,26 +5,33 @@
     <title>Lego Scanner</title>
 </head>
 <body>
-<p>Lego's sales for period</p>
+<div>
+    <form method="get" action="filterByDate">
+        <label>From:</label><input name="from" type="date"/>
+        <label>To:</label><input name="to" type="date"/>
+        <input type="submit" value="GO"/>
+    </form>
+</div>
+<p>Lego's sales</p>
 <#if legos?has_content>
 
 <table>
     <thead>
-        <tr>
-            <td>Date</td>
-            <td>Name</td>
-            <td>Price</td>
-            <td>Sale Price</td>
-        </tr>
+    <tr>
+        <td>Date</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Sale Price</td>
+    </tr>
     </thead>
     <tbody>
     <#list legos as lego>
-        <tr id="${lego.id}">
-            <td>${lego.date}</td>
-            <td>${lego.legoName}</td>
-            <td>${lego.price}</td>
-            <td>${lego.priceForSale}</td>
-        </tr>
+    <tr id="${lego.id}">
+        <td>${lego.date}</td>
+        <td>${lego.legoName}</td>
+        <td>${lego.price}</td>
+        <td>${lego.priceForSale}</td>
+    </tr>
     </#list>
     </tbody>
 </table>

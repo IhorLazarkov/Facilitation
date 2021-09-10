@@ -1,4 +1,6 @@
 LegoScannerTest.java
  LegoScannerTest
-LegoWebAppTest.java
- LegoWebAppTest
+HomeControllerTest.java
+ HomeControllerTest
+DataCollectionTest.java
+ DataCollectionTest
