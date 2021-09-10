@@ -32,9 +32,9 @@ public class LegoDAO {
         return bean -> {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             try {
-                Date currentDate = simpleDateFormat.parse(LocalDateTime.now().toString());
+                Date today = simpleDateFormat.parse(LocalDateTime.now().toString());
                 Date date = simpleDateFormat.parse(bean.getDate());
-                int result = date.compareTo(currentDate);
+                int result = date.compareTo(today);
                 return result == 0;
 
             } catch (ParseException e) {

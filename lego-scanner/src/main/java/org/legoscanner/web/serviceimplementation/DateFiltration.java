@@ -9,7 +9,7 @@ import java.util.Date;
 public class DateFiltration {
 
     public enum DateFormat {
-        DATE_FORMAT("yyyy-mm-dd");
+        DATE_FORMAT("yyyy-MM-dd");
 
         private String value;
 
@@ -29,11 +29,11 @@ public class DateFiltration {
     }
 
     public boolean fromDateOnward(LegoBean legoBean) {
-        return asDate(date).compareTo(asDate(legoBean.getDate())) <= 0;
+        return asDate(legoBean.getDate()).compareTo(asDate(date)) >= 0;
     }
 
     public boolean fromDateBackward(LegoBean legoBean) {
-        return asDate(date).compareTo(asDate(legoBean.getDate())) >= 0;
+        return asDate(legoBean.getDate()).compareTo(asDate(date)) <= 0;
     }
 
     private Date asDate(String date) {
