@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/facilitation.iml" filepath="$PROJECT_DIR$/.idea/modules/facilitation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.iml" filepath="$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lego-scanner/facilitation.lego-scanner.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/start-ubs/facilitation.start-ubs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/start-ubs/facilitation.start-ubs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/start-ubs/facilitation.start-ubs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/start-ubs/facilitation.start-ubs.test.iml" />
+    </modules>
+  </component>
+</project>
