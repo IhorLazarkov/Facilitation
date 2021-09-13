@@ -5,9 +5,9 @@ one idea under development is **Lego Scanner**.
 
 # Lego Scanner
 
-It will open Lego.com and will store all propositions in **Sales** page into in-memory Apache.Derby database.
-It should be run on daily basis just to collect historical data to see if there were any 
-changed in prices or to see that propositions popped up.
+It will open Lego.com and will store all propositions on **Sales** page into in-memory Apache.Derby database.
+It should be run on daily basis to collect data and keep it and analyze from historical perspective just ti see if there were any 
+changes in prices or to see any new propositions appeared.
 
 The scanning part done via Selenium and Web App is done via Spring-Boot-Web
 
