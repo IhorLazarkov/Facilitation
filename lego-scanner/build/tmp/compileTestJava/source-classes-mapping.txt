@@ -1,0 +1,6 @@
+LegoScannerTest.java
+ LegoScannerTest
+HomeControllerTest.java
+ HomeControllerTest
+DataCollectionTest.java
+ DataCollectionTest
