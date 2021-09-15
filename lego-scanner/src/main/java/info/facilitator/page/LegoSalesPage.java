@@ -24,6 +24,8 @@ public class LegoSalesPage {
     private WebElement btnSales;
     @FindAll(@FindBy(css = "ul[class^=ProductGridstyles__Grid] li[class^=ProductGridstyles__Item]"))
     private List<WebElement> legos;
+    @FindAll(@FindBy(css = "a[data-test^=pagination-page]"))
+    private List<WebElement> pages;
 
     public LegoSalesPage(WebDriver driver) {
         this.driver = driver;
@@ -41,30 +43,35 @@ public class LegoSalesPage {
         List<LegoBean> legoBeans = new ArrayList<>();
         wait.until(ExpectedConditions.visibilityOfAllElements(legos));
 
-        for (WebElement webElement : legos) {
+        for (WebElement page : pages) {
 
-            WebElement price = null;
-            WebElement salesPrice = null;
-            WebElement legoName = null;
+            wait.until(ExpectedConditions.visibilityOf(page));
+            page.click();
 
-            try {
-                legoName = webElement.findElement(By.cssSelector("h2[data-test='product-leaf-title'] span"));
-                price = webElement.findElement(By.cssSelector("div[class^=ProductPricestyles__Wrapper] span[data-test='product-price']"));
-                salesPrice = webElement.findElement(By.cssSelector("div[class^=ProductPricestyles__Wrapper] span[data-test='product-price-sale']"));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            for (WebElement webElement : legos) {
 
-            if (legoName != null && price != null && salesPrice != null) {
-                LegoBean legoBean = new LegoBeanBuilder().createBean()
-                        .setLegoName(legoName.getText())
-                        .setPrice(getPrice(price))
-                        .setSalePrice(getPrice(salesPrice))
-                        .build();
-                legoBeans.add(legoBean);
+                WebElement price = null;
+                WebElement salesPrice = null;
+                WebElement legoName = null;
+
+                try {
+                    legoName = webElement.findElement(By.cssSelector("h2[data-test='product-leaf-title'] span"));
+                    price = webElement.findElement(By.cssSelector("div[class^=ProductPricestyles__Wrapper] span[data-test='product-price']"));
+                    salesPrice = webElement.findElement(By.cssSelector("div[class^=ProductPricestyles__Wrapper] span[data-test='product-price-sale']"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                if (legoName != null && price != null && salesPrice != null) {
+                    LegoBean legoBean = new LegoBeanBuilder().createBean()
+                            .setLegoName(legoName.getText())
+                            .setPrice(getPrice(price))
+                            .setSalePrice(getPrice(salesPrice))
+                            .build();
+                    legoBeans.add(legoBean);
+                }
             }
         }
-
         return legoBeans;
     }
 
