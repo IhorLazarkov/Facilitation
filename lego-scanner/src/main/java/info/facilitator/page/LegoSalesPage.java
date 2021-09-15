@@ -71,5 +71,4 @@ public class LegoSalesPage {
     private String getPrice(WebElement element) {
         return element.getText().split("\n")[1].replaceFirst("\\W", "");
     }
-
 }
