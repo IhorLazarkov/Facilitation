@@ -13,15 +13,11 @@ $("#findByName").keyup(function(event){
         data: { name: lookup }
     }).done(function(data){
         var v = "";
-        if(lookup === ""){
-            autocomplete.hide();
-        } else {
-            autocomplete.show();
-        }
         for(const item in data){
-            v = v.concat(item + ": " + data[item] + "\n");
-            console.log(v);
-            autocomplete.text(v);
+            v = v.concat("<option value=\"" + data[item] + "\"/>");
         }
+        console.log(v);
+        autocomplete.empty();
+        autocomplete.append(v);
     });
 });

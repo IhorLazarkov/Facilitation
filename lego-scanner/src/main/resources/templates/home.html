@@ -7,16 +7,16 @@
 <body>
 <div>
     <form method="get" action="filterByDate">
-        <label>From: </label><input name="from" type="date"/>
-        <label>To: </label><input name="to" type="date"/>
+        <label>From: <input name="from" type="date"/></label>
+        <label>To: <input name="to" type="date"/></label>
         <input type="submit" value="GO"/>
     </form>
     </br>
     <form method="get" action="getItemByName">
-        <label>Name: </label><input id="findByName" name="name"/>
+        <label>Name: <input list="autocomplete" id="findByName" name="name"/></label>
+        <datalist id="autocomplete"></datalist>
         <input type="submit" value="FIND"/>
     </form>
-    <textarea id="autocomplete" style="display:none;" rows="5" cols="50">test</textarea>
 </div>
 <p>Lego's sales</p>
 <#if legos?has_content>
