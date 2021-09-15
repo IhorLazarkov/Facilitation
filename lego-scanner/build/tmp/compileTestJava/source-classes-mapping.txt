@@ -4,3 +4,5 @@ LegoScannerTest.java
  LegoScannerTest
 DataCollectionTest.java
  DataCollectionTest
+AutocompleteControllerTest.java
+ AutocompleteControllerTest

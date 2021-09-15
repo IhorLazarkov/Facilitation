@@ -1,32 +1,34 @@
-info/facilitator/bean/dao/LegoDAO.java
- info.facilitator.bean.dao.LegoDAO
-info/facilitator/page/LegoWelcomePage.java
- info.facilitator.page.LegoWelcomePage
 org/legoscanner/web/app/Application.java
  org.legoscanner.web.app.Application
+info/facilitator/page/LegoWelcomePage.java
+ info.facilitator.page.LegoWelcomePage
+info/facilitator/bean/dao/LegoDAO.java
+ info.facilitator.bean.dao.LegoDAO
 info/facilitator/page/LegoWelcomePageBanner.java
  info.facilitator.page.LegoWelcomePageBanner
 info/facilitator/persister/SessionProvider.java
  info.facilitator.persister.SessionProvider
  info.facilitator.persister.SessionProvider$DatabaseFunctional
+org/legoscanner/web/config/SwaggerConfig.java
+ org.legoscanner.web.config.SwaggerConfig
 info/facilitator/page/AcceptCookiePage.java
  info.facilitator.page.AcceptCookiePage
-info/facilitator/page/LegoSalesPage.java
- info.facilitator.page.LegoSalesPage
 org/legoscanner/web/controllers/HomeController.java
  org.legoscanner.web.controllers.HomeController
-info/facilitator/bean/LegoBean.java
- info.facilitator.bean.LegoBean
+info/facilitator/page/LegoSalesPage.java
+ info.facilitator.page.LegoSalesPage
 org/legoscanner/web/components/ViewResolverComponent.java
  org.legoscanner.web.components.ViewResolverComponent
-info/facilitator/app/LegoScannerApp.java
- info.facilitator.app.LegoScannerApp
+info/facilitator/bean/LegoBean.java
+ info.facilitator.bean.LegoBean
+info/facilitator/bean/LegoBeanBuilder.java
+ info.facilitator.bean.LegoBeanBuilder
 org/legoscanner/web/serviceimplementation/DateFiltration.java
  org.legoscanner.web.serviceimplementation.DateFiltration
  org.legoscanner.web.serviceimplementation.DateFiltration$DateFormat
 org/legoscanner/web/serviceimplementation/DefaultFetcher.java
  org.legoscanner.web.serviceimplementation.DefaultFetcher
-info/facilitator/bean/LegoBeanBuilder.java
- info.facilitator.bean.LegoBeanBuilder
-org/legoscanner/web/config/SwaggerConfig.java
- org.legoscanner.web.config.SwaggerConfig
+info/facilitator/app/LegoScannerApp.java
+ info.facilitator.app.LegoScannerApp
+org/legoscanner/web/controllers/AutocompleteController.java
+ org.legoscanner.web.controllers.AutocompleteController
