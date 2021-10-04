@@ -3,6 +3,7 @@ package doc.scanner.utils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.stream.Stream;
 
 public class PropertyFileReader {
 
@@ -22,12 +23,15 @@ public class PropertyFileReader {
     }
 
     public void init() {
-        InputStream resource = PropertyFileReader.class.getResourceAsStream("/app.properties");
-        try {
-            properties.load(resource);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Stream.of("/app.properties", "/mail.properties")
+                .map(PropertyFileReader.class::getResourceAsStream)
+                .forEach(inputStream -> {
+                    try {
+                        properties.load(inputStream);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
     }
 
     public Properties getProperties() {
