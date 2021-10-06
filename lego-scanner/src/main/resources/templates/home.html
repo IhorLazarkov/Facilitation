@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Lego Scanner</title>
+
+    <link rel='stylesheet' href='/webjars/bootstrap/5.1.1/css/bootstrap.min.css'>
+
     <script type="text/javascript" src="/webjars/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/5.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/FindByName.js"></script>
@@ -18,15 +21,18 @@
 <body>
 <div>
     <form method="get" action="filterByDate">
-        <label>From: <input name="from" type="date"/></label>
-        <label>To: <input name="to" type="date"/></label>
-        <input type="submit" value="GO"/>
+        <div class="mb-3">
+            <label class="form-label">From: <input name="from" type="date"/></label>
+            <label class="form-label">To: <input name="to" type="date"/></label>
+            <input class="btn btn-primary" type="submit" value="GO"/>
+        </div>
     </form>
-    </br>
     <form method="get" action="getItemByName">
-        <label>Name: <input list="autocomplete" id="findByName" name="name"/></label>
-        <datalist id="autocomplete"></datalist>
-        <input type="submit" value="FIND"/>
+        <div class="mb-3">
+            <label class="form-label">Name: <input list="autocomplete" id="findByName" name="name"/></label>
+            <datalist id="autocomplete"></datalist>
+            <input class="btn btn-primary" type="submit" value="FIND"/>
+        </div>
     </form>
 </div>
 <p>Lego's sales</p>
@@ -57,4 +63,4 @@
 <p>No data available</p>
 </#if>
 </body>
-</html>+
+</html>
