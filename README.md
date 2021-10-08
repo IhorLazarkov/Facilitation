@@ -11,6 +11,8 @@ changes in prices or to see any new propositions appeared.
 
 The scanning part done via Selenium and Web App is done via Spring-Boot-Web
 
+![Screenshot](./lego-scanner/documentation/main-page.png)
+
 # How to build
 
 > gradlew :lego-scanner:build
