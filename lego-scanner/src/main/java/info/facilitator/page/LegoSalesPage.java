@@ -24,7 +24,7 @@ public class LegoSalesPage {
     private WebElement btnSales;
     @FindAll(@FindBy(css = "ul[class^=ProductGridstyles__Grid] li[class^=ProductGridstyles__Item]"))
     private List<WebElement> legos;
-    @FindAll(@FindBy(css = "a[data-test^=pagination-page]"))
+    @FindAll(@FindBy(css = "a[data-test^=pagination-doc.scanner.page]"))
     private List<WebElement> pages;
 
     public LegoSalesPage(WebDriver driver) {
