@@ -3,7 +3,7 @@
 Someday this project might grow in multiple-modules project. However, for there is only
 one idea under development is **Lego Scanner**.
 
-#Document status scanner (Project 1) 
+# Document status scanner (Project 1) 
 ![TeamCity build status](http://localhost:8111/app/rest/builds/buildType:id:Facilitation_Build,branch:name:development/statusIcon.svg) 
 
 It will scan status of my passport on daily basis. 
