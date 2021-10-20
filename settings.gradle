@@ -1,4 +1,4 @@
 rootProject.name = 'facilitation'
 
 include 'lego-scanner'
-
+include 'doc-scanner'

@@ -5,7 +5,7 @@ one idea under development is **Lego Scanner**.
 
 # Lego Scanner
 
-It will open Lego.com and will store all propositions on **Sales** page into in-memory Apache.Derby database.
+It will open Lego.com and will store all propositions on **Sales** doc.scanner.page into in-memory Apache.Derby database.
 It should be run on daily basis to collect data and keep it and analyze from historical perspective just ti see if there were any 
 changes in prices or to see any new propositions appeared.
 
