@@ -1,8 +1,15 @@
 package doc.scanner;
 
 import doc.scanner.facade.Scenarios;
+
 import static org.assertj.core.api.Assertions.*;
+
+import doc.scanner.rules.DefaultRule;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+import java.util.function.Predicate;
 
 public class AppTest extends Scenarios {
 
@@ -10,7 +17,7 @@ public class AppTest extends Scenarios {
     private String ID;
 
     @Test
-    public void test(){
+    public void test() {
 
         AppTest appTest = new AppTest();
         appTest.setURL(System.getProperty("doc-scanner-url"));
@@ -30,6 +37,11 @@ public class AppTest extends Scenarios {
     @Override
     public String getId() {
         return this.ID;
+    }
+
+    @Override
+    public Predicate<List<WebElement>> rule() {
+        return DefaultRule::rule;
     }
 
     public void setURL(String URL) {
