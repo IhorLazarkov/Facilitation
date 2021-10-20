@@ -14,6 +14,7 @@ import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
+import java.util.function.Predicate;
 
 public abstract class Scenarios {
 
@@ -46,10 +47,12 @@ public abstract class Scenarios {
             elements.addAll(records);
             elements.forEach(element -> System.out.printf("Value: %s\n", new String(element.getText().getBytes(StandardCharsets.UTF_8))));
         });
-        return elements.size() == 6;
+        return rule().test(elements);
     }
 
     abstract public String getUrl();
 
     abstract public String getId();
+
+    abstract public Predicate<List<WebElement>> rule();
 }
