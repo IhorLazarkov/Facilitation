@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,14 +19,17 @@ import java.util.Properties;
 
 public abstract class Scenarios {
 
-    public static boolean getStatus() {
+    public boolean getStatus() {
         List<WebElement> elements = new LinkedList<>();
-        WebDriverProvider.withDriver(driver -> {
+        Properties properties = PropertyFileReader.getInstance().getProperties();
+        final long WAIT = Long.parseLong(properties.getProperty("wait"));
+        final String URL = getUrl();
+        final String ID = getId();
 
-            Properties properties = PropertyFileReader.getInstance().getProperties();
-            final long WAIT = Long.parseLong(properties.getProperty("wait"));
-            final String URL = properties.getProperty("url");
-            final String ID = properties.getProperty("id");
+        System.out.println(getUrl());
+        System.out.println(getId());
+
+        WebDriverProvider.withDriver(driver -> {
 
             WebDriverWait wait = new WebDriverWait(driver, WAIT);
             driver.get(URL);
@@ -43,8 +49,12 @@ public abstract class Scenarios {
 
             List<WebElement> records = resultPage.getRecords();
             elements.addAll(records);
-            elements.forEach(element -> System.out.printf("Value: %s\n", element.getText()));
+            elements.forEach(element -> System.out.printf("Value: %s\n", new String(element.getText().getBytes(StandardCharsets.UTF_8))));
         });
         return elements.size() == 6;
     }
+
+    abstract public String getUrl();
+
+    abstract public String getId();
 }

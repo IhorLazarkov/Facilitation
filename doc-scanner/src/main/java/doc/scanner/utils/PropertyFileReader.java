@@ -23,7 +23,7 @@ public class PropertyFileReader {
     }
 
     public void init() {
-        Stream.of("/app.properties", "/mail.properties")
+        Stream.of("/app.properties")
                 .map(PropertyFileReader.class::getResourceAsStream)
                 .forEach(inputStream -> {
                     try {
