@@ -26,9 +26,6 @@ public abstract class Scenarios {
         final String URL = getUrl();
         final String ID = getId();
 
-        System.out.println(getUrl());
-        System.out.println(getId());
-
         WebDriverProvider.withDriver(driver -> {
 
             WebDriverWait wait = new WebDriverWait(driver, WAIT);
