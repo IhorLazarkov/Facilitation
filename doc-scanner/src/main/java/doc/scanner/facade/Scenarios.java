@@ -1,16 +1,14 @@
 package doc.scanner.facade;
 
+import doc.scanner.page.MainPage;
 import doc.scanner.page.ResultPage;
 import doc.scanner.services.WebDriverProvider;
-import doc.scanner.page.MainPage;
 import doc.scanner.utils.PropertyFileReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.nio.charset.Charset;
-import java.nio.charset.CharsetEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.LinkedList;
