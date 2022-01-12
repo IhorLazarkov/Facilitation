@@ -1,11 +1,16 @@
 ----------------------------------------------------------------
-Thu Oct 07 20:45:55 CDT 2021:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017c-5d94-090e-000001202f40 
-on database directory C:\Users\Ihor_Lazarkov\Documents\Projects\Facilitation\data with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 
+Sat Jan 08 10:37:08 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-3a8d-07b0-000000d05d08 
+on database directory C:\Users\Ihor_Lazarkov\IdeaProjects\Facilitation\data with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@881831ee 
 Loaded from file:/C:/Users/Ihor_Lazarkov/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=14.0.1+7
-user.dir=C:\Users\Ihor_Lazarkov\Documents\Projects\Facilitation
+java.vendor=International Business Machines Corporation
+java.runtime.version=16.0.2+7
+java.fullversion=16.0.2+7
+JRE 16 Windows 10 amd64-64-Bit Compressed References 20210730_69 (JIT enabled, AOT enabled)
+OpenJ9   - 1851b0074
+OMR      - 9db1c870d
+JCL      - 34df42439f3 based on jdk-16.0.2+7
+user.dir=C:\Users\Ihor_Lazarkov\IdeaProjects\Facilitation
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0

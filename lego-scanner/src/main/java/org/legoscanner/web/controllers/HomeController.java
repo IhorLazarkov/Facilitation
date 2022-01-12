@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @RestController
 public class HomeController {
 
-    private final List<LegoBean> legos = new LinkedList<>();
+    private final static List<LegoBean> legos = new LinkedList<>();
     private final ModelAndView mv = new ModelAndView("home");
 
     @Autowired
@@ -30,9 +30,11 @@ public class HomeController {
     @ApiOperation(value = "Get all records", response = ModelAndView.class)
     @GetMapping("/")
     public ModelAndView index() {
-        SessionProvider.withSession(session -> {
-            legos.addAll(fetcher.apply(session));
-        });
+        if(legos.isEmpty()) {
+            SessionProvider.withSession(session -> {
+                legos.addAll(fetcher.apply(session));
+            });
+        }
         mv.addObject("legos", legos);
         legos.forEach(System.out::println);
         return mv;

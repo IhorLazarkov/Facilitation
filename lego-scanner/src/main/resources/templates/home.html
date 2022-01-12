@@ -32,14 +32,14 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand">Lego Scanner App</a>
-        <form method="get" action="getItemByName">
+        <form method="get" action="getItemByName" autocomplete="off">
             <label>Name:
             <input type="text" class="form-control" list="autocomplete" id="findByName" name="name"/>
             </label>
             <datalist id="autocomplete"></datalist>
             <input class="btn btn-outline-success" type="submit" value="FIND"/>
         </form>
-        <form method="get" action="filterByDate">
+        <form method="get" action="filterByDate" autocomplete="off">
             <label class="form-label">From: <input class="form-control" name="from" type="date"/></label>
             <label class="form-label">To: <input class="form-control" name="to" type="date"/></label>
             <input class="btn btn-outline-secondary" type="submit" value="GO"/>
