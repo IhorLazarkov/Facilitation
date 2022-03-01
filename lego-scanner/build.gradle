@@ -35,13 +35,16 @@ test {
 }
 
 task runScanner(type: JavaExec){
-    dependsOn 'build'
+
+//    dependsOn 'build'
+
     classpath = sourceSets.main.runtimeClasspath
+
     mainClass = "info.facilitator.app.LegoScannerApp"
 }
 
 task runWebApp(type: JavaExec){
-    dependsOn 'build'
     classpath = sourceSets.main.runtimeClasspath
-    mainClass ='org.legoscanner.web.app.Application'
+
+    mainClass = "org.legoscanner.web.app.Application"
 }
